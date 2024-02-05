@@ -39,4 +39,75 @@ function getTheMin (numbers) {
     }
     return min
 }
-console.log(getTheMin(height))
+// console.log(getTheMin(height))
+function woodQuantity(chair, table, bed){
+    const chairs = chair * 3
+    const tables = table * 10
+    const beds = bed * 50
+    const totalWood = chairs + tables + beds
+    return totalWood
+}
+
+// console.log(woodQuantity(1,1,1))
+const prices = [2000, 40000, 740000, 400, 5400]
+
+function topRatedPhones (prices) {
+    let max = prices[0]
+    for (const price of prices) {
+        if( price > max) {
+            max = price
+        }
+    }
+    return max
+}
+// console.log(topRatedPhones(prices))
+const mobiles = [
+    {
+        name: 'samsung',
+        price: 20000,
+        camera: '12mp',
+        color: 'black'
+    },
+    {
+        name: 'vivo',
+        price: 24000,
+        camera: '12mp',
+        color: 'black'
+    },
+    {
+        name: 'oppo',
+        price: 12000,
+        camera: '12mp',
+        color: 'black'
+    },
+    {
+        name: 'walton',
+        price: 4000,
+        camera: '12mp',
+        color: 'black'
+    },
+    {
+        name: 'iphone',
+        price: 34000,
+        camera: '12mp',
+        color: 'black'
+    },
+    {
+        name: 'infinix',
+        price: 17000,
+        camera: '12mp',
+        color: 'black'
+    },
+]
+
+
+function getTheBestPhones (phones) {
+    let min = phones[0]
+    for (const phone of phones){
+        if(phone.price < min.price){
+            min = phone
+        }
+    }
+    return min
+}
+// console.log(getTheBestPhones(mobiles))
