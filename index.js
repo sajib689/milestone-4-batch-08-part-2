@@ -186,4 +186,20 @@ function discountCalculator(totalPrice) {
     
 }
 
-console.log(discountCalculator(200))
+// console.log(discountCalculator(200))
+
+function layerDiscount(totalPrice) {
+    if (totalPrice <= 100) {
+       const total = totalPrice * 100
+        return total
+    } else if (totalPrice <= 200) {
+        const total = totalPrice * 90
+        return total
+    } else {
+        const total = totalPrice * 70
+        return total
+    }
+    
+}
+
+console.log(layerDiscount(100))
