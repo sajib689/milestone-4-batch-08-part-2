@@ -111,3 +111,79 @@ function getTheBestPhones (phones) {
     return min
 }
 // console.log(getTheBestPhones(mobiles))
+const products = [
+    {
+        name: 'shampo',
+        price: 200,
+    },
+    {
+        name: 'cironi',
+        price: 400,
+    },
+    {
+        name: 'shirt',
+        price: 700,
+    },
+    {
+        name: 'pant',
+        price: 750,
+    },
+]
+
+function getTotal (products) {
+    let sum = 0
+    for (const product of products) {
+        sum = sum + product.price
+    }
+    return sum
+}
+// console.log(getTotal(products));
+
+const productCarts = [
+    {
+        name: 'shampo',
+        price: 200,
+        quantity: 9,
+    },
+    {
+        name: 'cironi',
+        price: 400,
+        quantity: 7,
+    },
+    {
+        name: 'shirt',
+        price: 700,
+        quantity: 2,
+    },
+    {
+        name: 'pant',
+        price: 750,
+        quantity: 4,
+    },
+]
+
+function shoppingCart (products) {
+    let sum = 0
+    for (const product of products) {
+       const cost = product.price * product.quantity
+       sum += cost
+    }
+    return sum
+}
+// console.log(shoppingCart(productCarts))
+
+function discountCalculator(totalPrice) {
+    if (totalPrice <= 100) {
+       const total = totalPrice * 100
+        return total
+    } else if (totalPrice <= 200) {
+        const total = totalPrice * 90
+        return total
+    } else {
+        const total = totalPrice * 70
+        return total
+    }
+    
+}
+
+console.log(discountCalculator(200))
