@@ -228,4 +228,50 @@ function matchNumber (string1, string2) {
     }
 }
 
-console.log(matchNumber(12, 'Code'))
+// console.log(matchNumber(12, 'Code'))
+
+function sortMaker (arr) {
+    const [a , b] = arr
+    if(a < 0 || b < 0) {
+        return 'Invalid Input'
+    } 
+    if ( a === b) {
+        return 'Equal'
+    }
+    if( a > b ) {
+        return [a, b]
+    } else {
+        return [b, a]
+    }
+}
+
+// console.log(sortMaker([12,13]))
+
+function findAddress(obj) {
+    let street = obj.street
+    let house = obj.house
+    const society = obj.society
+    return (street ? street : '__') + ',' + (house ? house : '__') + ',' + (society ? society : '__');
+
+}
+
+// console.log(findAddress({ society: "Earth Perfect"}))
+
+function canPay (a, b) {
+    
+    let sum = 0;
+    if (a.length === 0 || b === undefined) {
+        console.log('empty');
+    } else {
+        for ( tk of a) {
+            sum =sum + tk
+        }
+       if(sum >= b) {
+        return true;
+       } else {
+        return false;
+       }
+    }
+    
+}
+console.log(canPay([2, 2, 5],10))
