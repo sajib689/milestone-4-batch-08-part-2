@@ -202,4 +202,30 @@ function layerDiscount(totalPrice) {
     
 }
 
-console.log(layerDiscount(100))
+// console.log(layerDiscount(100))
+
+function cubeNumber (number) {
+    if(typeof number !== 'number') {
+        return false
+    } else {
+        number = number * number * number
+        return number
+    }
+}
+// console.log(cubeNumber(4))
+
+function matchNumber (string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        console.log('Give me a string');
+        return false;  // Return false if at least one of the inputs is not a string
+    }
+
+    if(string1.toLowerCase().includes(string2.toLowerCase())) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(matchNumber(12, 'Code'))
